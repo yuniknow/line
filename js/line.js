@@ -258,7 +258,7 @@ $(function () {
 
     // 인디케이터 클릭이벤트 설정 -> ●●●● 클릭시 동작시킴 
 
-    $indicator.on("click", function () {
+    $indicator.on("click", function (evt) {
         nowIdx = $indicator.index($(this));
         if (oldIdx != nowIdx) {
             move(); // 슬라이드 함수호출
@@ -294,7 +294,8 @@ $(function () {
 
     // 일체형 재생,정지 버튼에 대한 클릭 이벤트 설정 
 
-    $btnAuto.on("click", function (evt) {
+    $btnAuto.on("click", function (
+               ) {
 
         var stateVal = null;
         if ($(this).data("state") == "on") {
